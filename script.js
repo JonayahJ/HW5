@@ -19,38 +19,46 @@
 // THEN the saved events persist
 
 //  CODE ======================================================================================================
+$(document).ready(function(){
+
 
 // VARIABLES
-// const currentDay = $("current-day");
 const date = moment();
-    console.log(date.format("dddd\, MMMM Mo\, YYYY")); 
+    console.log(date.format("dddd\, MMMM Do\, YYYY")); 
     // off by 2 days???
 
-// const time 
+var timeBlock = $(".time-block");
+var hourEl = $(".hour");
+var pastEl = $(".past");
+var presentEl = $(".present");
+var futureEl = $(".future");
 
-var timeBlock = $("time-block");
-var hourEl = $("hour");
-var pastEl = $("past");
-var presentEl = $("present");
-var futureEl = $("future");
+var saveBtn = $(".saveBtn");
 
-var saveBtn = $("saveBtn");
+var time = ["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"];
 
+console.log(time);
 
 // PLANNER - show date and time
 function displayDate() {
-    var currentDay = document.getElementById("current-day")
-    currentDay.innerHTML = date.format("dddd\, MMMM Mo");
-    // currentDay.innerHTML = Date();
+    var currentDay = document.getElementById("current-day");
+    currentDay.innerHTML = date.format("dddd\, MMMM Do");
 }
 
 displayDate();
 
 // TIMEBLOCKS AND BUSINESS HOURS
-    // SHOW HOURS (9-5)    
-    
+    // SHOW HOURS (9-5) 
+    // how to add 8 rows and 3 columns   
+    // col 1. time with text moved to the side and borders added, attribute added to target
+    // col 2. text box, which needs attribute to help differentiate it
+    // col 3. save box, which will locally save whats in the box, needs atrributes aswell
+
 
     // COLOR CODING FOR THE TIME OF DAY
+    // if past, color grey
+    // if present, color red
+    // if future, color green
 
 
     // INPUT FIELD FOR TIMEBLOCK
@@ -60,3 +68,4 @@ displayDate();
 
 
     // SAVES DESPITE REFRESH
+});
