@@ -33,100 +33,100 @@
       <!-- Timeblocks go here -->
       <!-- block 1 -->
       <div id="hour-9" class="row time-block">
-        <div class="col-md-1 hour">
-          9:00am
+        <div class="col-md-2 hour">
+          9:00 AM
         </div>
-        <textarea class="col-md-10 description"> </textarea>
+        <textarea class="col-md-9 description"> </textarea>
         <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
+          <i class="fa fa-file" aria-hidden="true"></i>
         </button>
       </div>
 
       <!-- block 2 -->
       <div id="hour-10" class="row time-block">
-        <div class="col-md-1 hour">
-          10:00am
+        <div class="col-md-2 hour">
+          10:00 AM
         </div>
-        <textarea class="col-md-10 description"> </textarea>
+        <textarea class="col-md-9 description"> </textarea>
         <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
+          <i class="fa fa-file" aria-hidden="true"></i>
         </button>
       </div>
 
       <!-- block 3 -->
       <div id="hour-11" class="row time-block">
-        <div class="col-md-1 hour">
-          11:00am
+        <div class="col-md-2 hour">
+          11:00 AM
         </div>
-        <textarea class="col-md-10 description"> </textarea>
+        <textarea class="col-md-9 description"> </textarea>
         <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
+          <i class="fa fa-file" aria-hidden="true"></i>
         </button>
       </div>
 
       <!-- block 4 -->
       <div id="hour-12" class="row time-block">
-        <div class="col-md-1 hour">
-          12:00pm
+        <div class="col-md-2 hour">
+          12:00 PM
         </div>
-        <textarea class="col-md-10 description"> </textarea>
+        <textarea class="col-md-9 description"> </textarea>
         <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
+          <i class="fa fa-file" aria-hidden="true"></i>
         </button>
       </div>
 
       <!-- block 5 -->
       <div id="hour-13" class="row time-block">
-        <div class="col-md-1 hour">
-          1:00pm
+        <div class="col-md-2 hour">
+          1:00 PM
         </div>
-        <textarea class="col-md-10 description"> </textarea>
+        <textarea class="col-md-9 description"> </textarea>
         <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
+          <i class="fa fa-file" aria-hidden="true"></i>
         </button>
       </div>
 
       <!-- block 6 -->
       <div id="hour-14" class="row time-block">
-        <div class="col-md-1 hour">
-          2:00pm
+        <div class="col-md-2 hour">
+          2:00 PM
         </div>
-        <textarea class="col-md-10 description"> </textarea>
+        <textarea class="col-md-9 description"> </textarea>
         <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
+          <i class="fa fa-file" aria-hidden="true"></i>
         </button>
       </div>
 
       <!-- block 7 -->
       <div id="hour-15" class="row time-block">
-        <div class="col-md-1 hour">
-          3:00pm
+        <div class="col-md-2 hour">
+          3:00 PM
         </div>
-        <textarea class="col-md-10 description"> </textarea>
+        <textarea class="col-md-9 description"> </textarea>
         <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
+          <i class="fa fa-file" aria-hidden="true"></i>
         </button>
       </div>
 
       <!-- block 4 -->
       <div id="hour-16" class="row time-block">
-        <div class="col-md-1 hour">
-          4:00pm
+        <div class="col-md-2 hour">
+          4:00 PM
         </div>
-        <textarea class="col-md-10 description"> </textarea>
+        <textarea class="col-md-9 description"> </textarea>
         <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
+          <i class="fa fa-file" aria-hidden="true"></i>
         </button>
       </div>
 
       <!-- block 5 -->
       <div id="hour-17" class="row time-block">
-        <div class="col-md-1 hour">
-          5:00pm
+        <div class="col-md-2 hour">
+          5:00 PM
         </div>
-        <textarea class="col-md-10 description"> </textarea>
+        <textarea class="col-md-9 description"> </textarea>
         <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
+          <i class="fa fa-file" aria-hidden="true"></i>
         </button>
       </div>
 
@@ -137,96 +137,81 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script>
-
-      // REQUIREMENTS ===============================================================================================
-
-      // WHEN I open the planner
-      // THEN the current day is displayed at the top of the calendar
-
-      // WHEN I scroll down
-      // THEN I am presented with timeblocks for standard business hours
-
-      // WHEN I view the timeblocks for that day
-      // THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-
-      // WHEN I click into a timeblock
-      // THEN I can enter an event
-
-      // WHEN I click the save button for that timeblock
-      // THEN the text for that event is saved in local storage
-
-      // WHEN I refresh the page
-      // THEN the saved events persist
-
-      //  CODE ======================================================================================
       $(document).ready(function(){
 
 
       // VARIABLES
+      // will make the moment library work
       const date = moment();
 
-      // var timeBlock = $(".time-block");
-      // var hourEl = $(".hour");
-      // var pastEl = $(".past");
-      // var presentEl = $(".present");
-      // var futureEl = $(".future");
-
-
-      // console.log(time);
-
-      // PLANNER - show date and time
+      // PLANNER
+      //show date and time
       var currentDay = $("#current-day");
 
       function displayDate() {
+        // displays the date in the moment format
           currentDay.text(moment().format("dddd, MMMM Do, YYYY"));
       }
 
       displayDate();
 
       // TIMEBLOCKS AND BUSINESS HOURS =========================================
-        // user's current time
+        // user's current time for color coding later
         function myHour() {
-        var d = new Date();
-        var n = d.getHours();
-        return parseInt(n);
+          var d = new Date();
+          var n = d.getHours();
+          return parseInt(n);
         }
       
-        console.log(myHour());
+        // console.log(myHour());
 
         // COLOR CODING FOR THE TIME OF DAY
-        function buildRow() {
-          var time = $(this).attr("data-hour");
-          time = parseInt(time);
-
-            // if past, color grey
-            if (now > time) {
-              $(this).addClass("past");
-            }
-        
-           // if present, color red
-           if (now === time) {
+        $(".time-block").each(function (element) {
+          // console.log(this);
+          
+          //targets the time block saves it to time row
+          var timeRow = $(this);
+          // console.log(timeRow);
+          
+          //put in the user time
+          var now = myHour();
+          
+          //split allows the number to be separate from hour-# so that the id only grabs the
+          var time = parseInt(timeRow.attr("id").split("hour-")[1]);
+          // console.log(time);
+          
+          if (now === time) {
             $(this).addClass("present");
-            }
+            //if time.key === myHour, then block is red
+          }
+          
+          if (now > time) {
+            $(this).addClass("past");
+            //if time.key < myHour, then block is grey
+          }
+          
+          if (now < time) {
+            $(this).addClass("future");
+            // if time.key> if time.key < myHour, then block is green
+          }
+        });
 
-          // if future, color green
-            if (now < time) {
-              $(this).addClass("future");
-            }
-        }
 
         // SAVE BUTTON AND LOCAL STORAGE =======================================
-        
+        var userInputByHour = [];
+
         
         $(".saveBtn").on("click", function() {
           // get values of this particular save button
-          var text = $(this).siblings(".description".val());
+          var text = $(this).siblings(".description").val();
           // targeting the text box and getting the value from that box
           var time = $(this).parent().attr("id");
           // time similarly targets just the time
           localStorage.setItem(time, text);
+          // targets local storage to receive data on time and text
         });
 
-        //getting the hours from the descriptions
+        // getting the hours from the descriptions
         $("#hour-9 .description").val(localStorage.getItem("hour-9"));
         $("#hour-10 .description").val(localStorage.getItem("hour-10"));
         $("#hour-11 .description").val(localStorage.getItem("hour-11"));
@@ -236,9 +221,7 @@
         $("#hour-15 .description").val(localStorage.getItem("hour-15"));
         $("#hour-16 .description").val(localStorage.getItem("hour-16"));
         $("#hour-17 .description").val(localStorage.getItem("hour-17"));
-        ​
-        console.log(mrHour());
-      });
+      })
     </script>
   </body>
 </html>
