@@ -15,7 +15,7 @@ textarea{
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: #b9b8f1;
+  color: #202020;
   border-radius: 0;
   border-bottom: 10px dotted #f7b75d;
 }
@@ -32,7 +32,6 @@ textarea{
 }
 
 .row {
-  white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
   margin-top: 20px;
@@ -42,7 +41,8 @@ textarea{
   height: 80px;
   background-color: #2143af;
   color: #ffffff;
-  /* border-top: 1px solid #000000; */
+  padding-top: 30px;
+  font-size: 28px;
 }
 
 .past {
@@ -76,4 +76,19 @@ textarea{
 h1 {
   font-family: 'Sacramento', cursive;
   color: #f7b75d;
+}
+
+h2.lead {
+  font-size: 30px;
+}
+
+p.lead {
+  color: #2143af;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+textarea.col-md-9.description {
+  line-height: 1.5;
+  font-size: 25px;
 }
