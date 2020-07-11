@@ -14,6 +14,8 @@
 
 * I then added a function to the save button to get the descriptions from the hour blocks and added them into the local storage.
 
+* And then I continued to style the CSS.  You can see a screenshot here: ![Work Day Planner Screenshot](Assets/Work-Day-Planner.png)
+
 ## Comments
 
 So, I added all of my JavaScript and jQuery to the html file because I was having trouble with my script.js file.  Even though it was linked to the index.html file and the external links were there (and in the right order), it didn't work.  I'm not sure why.  So all of my jQuery is in the same file as the html.
